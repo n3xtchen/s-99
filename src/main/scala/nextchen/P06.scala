@@ -15,25 +15,23 @@ object P06 {
 	// res0: Boolean = true
 
   def isPalindrome[A](list: List[A]): Boolean = {
-    val len = length(list)
-    val mid = len / 2
-
     var s = 0
-    var e = len - 1
-
-    var r = true
+    var e = length(list) - 1
     while (s <= e) {
       if (list(s) != list(e)) {
-        r = false
+        return false
       }
       s = s + 1
       e = e - 1
     }
-    r
+    true
   }
+
+  def isPalindromeSimple[A](list: List[A]) = list == reverse(list)
 
 	def main(args: Array[String]) {
     println(isPalindrome(List(1, 2, 3, 2, 1)))
+    println(isPalindromeSimple(List(1, 2, 3, 2, 1)))
 	}
 }
 
