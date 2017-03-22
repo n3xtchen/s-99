@@ -22,7 +22,6 @@ object P08 {
   
   def compress[A](list: List[A]): List[A] = list match {
     case Nil => Nil
-    // case (head :: sec :: tail, x) if x == head => compress(tail, x)
     case head :: sec :: tail if sec == head => compress(head :: compress(tail))
     case head :: tail => head :: compress(tail)
   }
