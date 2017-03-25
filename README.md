@@ -60,61 +60,66 @@ Example:
 	scala> reverse(List(1, 1, 2, 3, 5, 8))
 	res0: List[Int] = List(8, 5, 3, 2, 1, 1)
 
-##### [P06](http://aperiodic.net/phil/scala/s-99/p06.scala) (*) 列表是否是回文（palindrome）
+##### [P06](http://aperiodic.net/phil/scala/s-99/p06.scala) (*) 列表是否顺读和倒读都一样（palindrome）
 Example:
 
 	scala> isPalindrome(List(1, 2, 3, 2, 1))
 	res0: Boolean = true
 
-##### [P07](http://aperiodic.net/phil/scala/s-99/p07.scala) (**) Flatten a nested list structure.
-Example:
+##### [P07](http://aperiodic.net/phil/scala/s-99/p07.scala) (**) 扁平输出一个嵌套列表
+Example: 
 
 	scala> flatten(List(List(1, 1), 2, List(3, List(5, 8))))
 	res0: List[Any] = List(1, 1, 2, 3, 5, 8)
 
-##### [P08](http://aperiodic.net/phil/scala/s-99/p08.scala) (**) Eliminate consecutive duplicates of list elements.
-If a list contains repeated elements they should be replaced with a single copy of the element. The order of the elements should not be changed.
+##### [P08](http://aperiodic.net/phil/scala/s-99/p08.scala) (**) 消除列表连续重复的元素
+如果一个列表包含重复的元素，应该被替换一个元素。元素的顺序不变。
 Example:
 
 	scala> compress(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
 	res0: List[Symbol] = List('a, 'b, 'c, 'a, 'd, 'e)
 
-##### [P09](http://aperiodic.net/phil/scala/s-99/p09.scala) (**) Pack consecutive duplicates of list elements into sublists.
+##### [P09](http://aperiodic.net/phil/scala/s-99/p09.scala) (**) Pack consecutive duplicates of list elements into sublists.把连续重复的列表元素提取到子列表中
 If a list contains repeated elements they should be placed in separate sublists.
+如果一个列表包含重复元素，应该被替换到独立的子列表中。
 Example:
 
 	scala> pack(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
 	res0: List[List[Symbol]] = List(List('a, 'a, 'a, 'a), List('b), List('c, 'c), List('a, 'a), List('d), List('e, 'e, 'e, 'e))
 
-##### [P10](http://aperiodic.net/phil/scala/s-99/p10.scala) (*) Run-length encoding of a list.
+##### [P10](http://aperiodic.net/phil/scala/s-99/p10.scala) (*) Run-length encoding of a list.一个列表的游程编码。
 Use the result of problem P09 to implement the so-called run-length encoding data compression method. Consecutive duplicates of elements are encoded as tuples (N, E) where N is the number of duplicates of the element E.
+使用 P09 的结果实现所谓数据游程编码的压缩方法。连续重复的元素被编码成元组（<重复的数量 N>, <重复的元素 E>）
 Example:
 
 	scala> encode(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
 	res0: List[(Int, Symbol)] = List((4,'a), (1,'b), (2,'c), (2,'a), (1,'d), (4,'e))
 
-##### [P11](http://aperiodic.net/phil/scala/s-99/p11.scala) (*) Modified run-length encoding.
+##### [P11](http://aperiodic.net/phil/scala/s-99/p11.scala) (*) Modified run-length encoding.改进游程编码。
 Modify the result of problem P10 in such a way that if an element has no duplicates it is simply copied into the result list. Only elements with duplicates are transferred as (N, E) terms.
+如果一个元素没有重复，只需要把它复制到结果列表中。只有重复的元素才会被转化成 (N, E)。
 Example:
 
 	scala> encodeModified(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
 	res0: List[Any] = List((4,'a), 'b, (2,'c), (2,'a), 'd, (4,'e))
 
-##### [P12](http://aperiodic.net/phil/scala/s-99/p12.scala) (**) Decode a run-length encoded list.
+##### [P12](http://aperiodic.net/phil/scala/s-99/p12.scala) (**) Decode a run-length encoded list.解码游程编码的列表。
 Given a run-length code list generated as specified in problem P10, construct its uncompressed version.
+给出 P10 的结果，构造一个解压版本。
 Example:
 
 	scala> decode(List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e)))
 	res0: List[Symbol] = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
 
-##### [P13](http://aperiodic.net/phil/scala/s-99/p13.scala) (**) Run-length encoding of a list (direct solution).
+##### [P13](http://aperiodic.net/phil/scala/s-99/p13.scala) (**) Run-length encoding of a list (direct solution).游程编码（直接的方案）
 Implement the so-called run-length encoding data compression method directly. I.e. don't use other methods you've written (like P09's pack); do all the work directly.
+直接实现游程编码的数据压缩方法。比如，不使用 P09 编写的其他方法；直接完成所有工作。
 Example:
 
 	scala> encodeDirect(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
 	res0: List[(Int, Symbol)] = List((4,'a), (1,'b), (2,'c), (2,'a), (1,'d), (4,'e))
 
-##### [P14](http://aperiodic.net/phil/scala/s-99/p14.scala) (*) Duplicate the elements of a list.
+##### [P14](http://aperiodic.net/phil/scala/s-99/p14.scala) (*) Duplicate the elements of a list.复制一个列表的元素
 Example:
 
 	scala> duplicate(List('a, 'b, 'c, 'c, 'd))
