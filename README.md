@@ -125,14 +125,14 @@ Example:
 	scala> duplicate(List('a, 'b, 'c, 'c, 'd))
 	res0: List[Symbol] = List('a, 'a, 'b, 'b, 'c, 'c, 'c, 'c, 'd, 'd)
 
-##### [P15](http://aperiodic.net/phil/scala/s-99/p15.scala) (**) Duplicate the elements of a list a given number of times.
+##### [P15](http://aperiodic.net/phil/scala/s-99/p15.scala) (**) Duplicate the elements of a list a given number of times.按照参数来决定复制的数量
 Example:
 
 	scala> duplicateN(3, List('a, 'b, 'c, 'c, 'd))
 	res0: List[Symbol] = List('a, 'a, 'a, 'b, 'b, 'b, 'c, 'c, 'c, 'c, 'c, 'c, 'd, 'd, 'd)
 
 ##### [P16](http://aperiodic.net/phil/scala/s-99/p16.scala) (**) Drop every Nth element from a list.
-Example:
+Example: 
 
 	scala> drop(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
 	res0: List[Symbol] = List('a, 'b, 'd, 'e, 'g, 'h, 'j, 'k)
