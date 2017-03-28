@@ -131,7 +131,7 @@ Example:
 	scala> duplicateN(3, List('a, 'b, 'c, 'c, 'd))
 	res0: List[Symbol] = List('a, 'a, 'a, 'b, 'b, 'b, 'c, 'c, 'c, 'c, 'c, 'c, 'd, 'd, 'd)
 
-##### [P16](http://aperiodic.net/phil/scala/s-99/p16.scala) (**) Drop every Nth element from a list.
+##### [P16](http://aperiodic.net/phil/scala/s-99/p16.scala) (**) Drop every Nth element from a list.从列表中每N个元素删除
 Example: 
 
 	scala> drop(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
