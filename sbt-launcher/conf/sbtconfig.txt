@@ -12,3 +12,5 @@
 
 -Dsbt.log.format=true
 
+-feature
+

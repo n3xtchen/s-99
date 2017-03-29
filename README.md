@@ -146,12 +146,12 @@ Example:
 	scala> split(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
 	res0: (List[Symbol], List[Symbol]) = (List('a, 'b, 'c),List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
 
-##### [P18](http://aperiodic.net/phil/scala/s-99/p18.scala) (**) Extract a slice from a list.
-Given two indices, I and K, the slice is the list containing the elements from and including the Ith element up to but not including the Kth element of the original list. Start counting the elements with 0.
+##### [P18](http://aperiodic.net/phil/scala/s-99/p18.scala) (**) Extract a slice from a list.从一个列表中提取一个子集
+Given two indices, I and K, the slice is the list containing the elements from and including the Ith element up to but not including the Kth element of the original list. Start counting the elements with 0.给出两个索引，I 和 K，该切片包含从第I个元素开始一直到第K个元素（但不包含K）。元素从 0 开始计数
 Example:
 
-	scala> slice(3, 7, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
-	res0: List[Symbol] = List('d, 'e, 'f, 'g)
+	scala> slice(3, 7, list('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+	res0: list[symbol] = list('d, 'e, 'f, 'g)
 
 ##### [P19](http://aperiodic.net/phil/scala/s-99/p19.scala) (**) Rotate a list N places to the left.
 Examples:

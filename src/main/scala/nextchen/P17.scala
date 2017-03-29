@@ -13,8 +13,8 @@ object P17 {
 
   def split[A](n: Int, list: List[A]): (List[A], List[A]) = {
     def proc(a: List[A], b: List[A]=Nil): (List[A], List[A]) = a match {
-      case a if b.length == n => (b, a)
-      case head :: tail => proc(tail, b ++ List(head))
+      case a if b.length == n => (b.reverse, a)
+      case head :: tail => proc(tail, head :: b) 
       case Nil => throw new Exception("位数不够")
     }
     proc(list)
