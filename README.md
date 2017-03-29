@@ -137,8 +137,10 @@ Example:
 	scala> drop(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
 	res0: List[Symbol] = List('a, 'b, 'd, 'e, 'g, 'h, 'j, 'k)
 
-##### [P17](http://aperiodic.net/phil/scala/s-99/p17.scala) (*) Split a list into two parts.
+##### [P17](http://aperiodic.net/phil/scala/s-99/p17.scala) (*) Split a list into two parts.把列表一分为二
 The length of the first part is given. Use a Tuple for your result.
+第一部分的长度会给出。返回的结果使用元祖。
+
 Example:
 
 	scala> split(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
