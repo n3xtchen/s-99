@@ -1,4 +1,5 @@
 /*
+ *
  * P18.scala
  * Copyright (C) 2017 n3xtchen <echenwen@gmail.com>
  *

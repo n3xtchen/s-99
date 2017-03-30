@@ -153,7 +153,7 @@ Example:
 	scala> slice(3, 7, list('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
 	res0: list[symbol] = list('d, 'e, 'f, 'g)
 
-##### [P19](http://aperiodic.net/phil/scala/s-99/p19.scala) (**) Rotate a list N places to the left.
+##### [P19](http://aperiodic.net/phil/scala/s-99/p19.scala) (**) Rotate a list N places to the left.列表向左旋转
 Examples:
 
 	scala> rotate(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
