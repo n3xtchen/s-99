@@ -162,14 +162,14 @@ Examples:
 	scala> rotate(-2, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
 	res1: List[Symbol] = List('j, 'k, 'a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i)
 
-##### [P20](http://aperiodic.net/phil/scala/s-99/p20.scala) (*) Remove the Kth element from a list.
+##### [P20](http://aperiodic.net/phil/scala/s-99/p20.scala) (*) Remove the Kth element from a list.从列表中删除某一个元素
 Return the list and the removed element in a Tuple. Elements are numbered from 0.
 Example:
 
 	scala> removeAt(1, List('a, 'b, 'c, 'd))
 	res0: (List[Symbol], Symbol) = (List('a, 'c, 'd),'b)
 
-##### [P21](http://aperiodic.net/phil/scala/s-99/p21.scala) (*) Insert an element at a given position into a list.
+##### [P21](http://aperiodic.net/phil/scala/s-99/p21.scala) (*) Insert an element at a given position into a list.将一个元素插入到列表中
 Example:
 
 	scala> insertAt('new, 1, List('a, 'b, 'c, 'd))
