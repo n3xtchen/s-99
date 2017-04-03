@@ -175,7 +175,7 @@ Example:
 	scala> insertAt('new, 1, List('a, 'b, 'c, 'd))
 	res0: List[Symbol] = List('a, 'new, 'b, 'c, 'd)
 
-##### [P22](http://aperiodic.net/phil/scala/s-99/p22.scala) (*) Create a list containing all integers within a given range.
+##### [P22](http://aperiodic.net/phil/scala/s-99/p22.scala) (*) Create a list containing all integers within a given range.创建一个列表，包含给予范围内的所有整数。
 Example:
 
 	scala> range(4, 9)
