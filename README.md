@@ -181,15 +181,16 @@ Example:
 	scala> range(4, 9)
 	res0: List[Int] = List(4, 5, 6, 7, 8, 9)
 
-##### [P23](http://aperiodic.net/phil/scala/s-99/p23.scala) (**) Extract a given number of randomly selected elements from a list.
+##### [P23](http://aperiodic.net/phil/scala/s-99/p23.scala) (**) Extract a given number of randomly selected elements from a list.从一个列表中随机提取指定数量的元素
 Example:
 
-	scala> randomSelect(3, List('a, 'b, 'c, 'd, 'f, 'g, 'h))
+	scala> randomSelect(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h))
 	res0: List[Symbol] = List('e, 'd, 'a)
 
 Hint: Use the solution to problem P20
+提示: 使用 P20 的解决方案
 
-##### [P24](http://aperiodic.net/phil/scala/s-99/p24.scala) (*) Lotto: Draw N different random numbers from the set 1..M.
+##### [P24](http://aperiodic.net/phil/scala/s-99/p24.scala) (*) Lotto: Draw N different random numbers from the set 1..M.乐透:随机生成N个1到M范围内的整数(每一个都不重复)。
 Example:
 
 	scala> lotto(6, 49)
