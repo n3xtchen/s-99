@@ -196,8 +196,8 @@ Example:
 	scala> lotto(6, 49)
 	res0: List[Int] = List(23, 1, 17, 33, 21, 37)
 
-##### [P25](http://aperiodic.net/phil/scala/s-99/p25.scala) (*) Generate a random permutation of the elements of a list.
-Hint: Use the solution of problem P23.
+##### [P25](http://aperiodic.net/phil/scala/s-99/p25.scala) (*) Generate a random permutation of the elements of a list.随机排列一个列表
+Hint: Use the solution of problem P23.提示：使用 P23 的解决方案
 Example:
 
 	scala> randomPermute(List('a, 'b, 'c, 'd, 'e, 'f))
