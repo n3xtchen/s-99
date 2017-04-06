@@ -7,12 +7,13 @@
 
 package nextchen
 
+import reflect.ClassTag
 import P23.randomSelect
 
 object P25 {
   // scala> randomPermute(List('a, 'b, 'c, 'd, 'e, 'f))
 	// res0: List[Symbol] = List('b, 'a, 'd, 'c, 'e, 'f)
-
+  
   // O(N^2)
   def randomPermute[A](list: List[A]) = {
     randomSelect(list.length, list)
@@ -23,7 +24,7 @@ object P25 {
    * http://www.cnblogs.com/Jerry-Chou/archive/2012/01/04/2311610.html
    * scala 创建范性 Array, 需要函数定义定义范型类型 A: Manifest
    **/
-  def FisherYatesShuffle[A: Manifest](list: List[A]) = {
+  def FisherYatesShuffle[A: ClassTag](list: List[A]) = {
     val rand = new util.Random
     val arr = list.toArray
     for (n <- arr.length - 1 to 1 by -1) {
