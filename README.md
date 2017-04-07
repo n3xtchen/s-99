@@ -203,15 +203,17 @@ Example:
 	scala> randomPermute(List('a, 'b, 'c, 'd, 'e, 'f))
 	res0: List[Symbol] = List('b, 'a, 'd, 'c, 'e, 'f)
 
-##### [P26](http://aperiodic.net/phil/scala/s-99/p26.scala) (**) Generate the combinations of K distinct objects chosen from the N elements of a list.
+##### [P26](http://aperiodic.net/phil/scala/s-99/p26.scala) (**) Generate the combinations of K distinct objects chosen from the N elements of a list.生成从列表的N个元素中选择的K个不同对象的组合
 In how many ways can a committee of 3 be chosen from a group of 12 people? We all know that there are C(12,3) = 220 possibilities (C(N,K) denotes the well-known binomial coefficient). For pure mathematicians, this result may be great. But we want to really generate all the possibilities.
+从 1 组 12 人中抽出 3 人委员会会有多少种方式？我们都知道 C(12, 3) = 220 (C(N,K) 就是众所周知的二项式系数)。对于纯数学家来说，这个结果是巨大的。但是我们真的想生成所有的可能的结果。
 Example:
 
 	scala> combinations(3, List('a, 'b, 'c, 'd, 'e, 'f))
 	res0: List[List[Symbol]] = List(List('a, 'b, 'c), List('a, 'b, 'd), List('a, 'b, 'e), ...
 
-##### [P27](http://aperiodic.net/phil/scala/s-99/p27.scala) (**) Group the elements of a set into disjoint subsets.
+##### [P27](http://aperiodic.net/phil/scala/s-99/p27.scala) (**) Group the elements of a set into disjoint subsets.将一个集合分在不相交的子集
 a) In how many ways can a group of 9 people work in 3 disjoint subgroups of 2, 3 and 4 persons? Write a function that generates all the possibilities.
+a) 
 Example:
 
 	scala> group3(List("Aldo", "Beat", "Carla", "David", "Evi", "Flip", "Gary", "Hugo", "Ida"))
