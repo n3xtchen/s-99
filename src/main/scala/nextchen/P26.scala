@@ -13,13 +13,21 @@ object P26 {
 	// scala> combinations(3, List('a, 'b, 'c, 'd, 'e, 'f))
 	// res0: List[List[Symbol]] = List(List('a, 'b, 'c), List('a, 'b, 'd), List('a, 'b, 'e), ...
 
-  def combinations[A](k: Int, list: List[A]): List[List[A]] = (k, list) match {
-    case (1, _) => list.map(List(_))
-    case _ => {
+  def subList[A](k: Int, list: List[A]): List[(A, List[A])] = {
+    if (k == 0) {
+      Nil
+    } else {
+      val head :: tail = list
+      (head, tail) :: subList(k-1, tail)
+    }
+  }
+
+  def combinations[A](k: Int, list: List[A]): List[List[A]] = {
+    if (k == 1) {
+      list.map(List(_))
+    } else {
       for {
-        (item, i) <- list.zipWithIndex
-        val (_, tail) = list.splitAt(i+1)
-        if i < list.length-k+1
+        (item, tail) <- subList(list.length-k+1, list)
         e <- combinations(k-1, tail).map(item::_)
       } yield e 
     } toList
