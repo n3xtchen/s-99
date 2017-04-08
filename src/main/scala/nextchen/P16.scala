@@ -16,7 +16,7 @@ object P16 {
       (item, i) <- list.zipWithIndex
       if (i+1) % n != 0
     } yield item
-  } toSeq
+  }.toSeq
 
   def main(args: Array[String]) {
     println(drop(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)))

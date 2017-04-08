@@ -30,7 +30,7 @@ object P26 {
         (item, tail) <- subList(list.length-k+1, list)
         e <- combinations(k-1, tail).map(item::_)
       } yield e 
-    } toList
+    }.toList
   }
 
   def main(args: Array[String]) {

@@ -17,7 +17,7 @@ object P18 {
       (item, index) <- list.zipWithIndex
       if index >= i && index < k
     } yield item
-  } toSeq
+  }.toSeq
 
   def main(args: Array[String]) {
     println(slice(3, 7, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)))

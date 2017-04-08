@@ -16,7 +16,7 @@ object P14 {
       i <- list
       _ <- 1 to 2
     } yield i
-  } toSeq
+  }.toSeq
 
   def main(args: Array[String]) {
     println(duplicate(List('a, 'b, 'c, 'c, 'd)))

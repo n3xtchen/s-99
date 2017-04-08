@@ -16,7 +16,7 @@ object P15 {
       i <- list
       _ <- 1 to n
     } yield i
-  } toSeq
+  }.toSeq
 
   def main(args: Array[String]) {
     println(duplicateN(3, List('a, 'b, 'c, 'c, 'd)))

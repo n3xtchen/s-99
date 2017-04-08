@@ -7,6 +7,7 @@
 
 package nextchen
 
+import scala.language.implicitConversions // 告诉编译器，使用隐式转化的功能
 import P05.reverse
 import P17.split
 
