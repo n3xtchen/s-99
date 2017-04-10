@@ -213,13 +213,14 @@ Example:
 
 ##### [P27](http://aperiodic.net/phil/scala/s-99/p27.scala) (**) Group the elements of a set into disjoint subsets.将一个集合分在不相交的子集
 a) In how many ways can a group of 9 people work in 3 disjoint subgroups of 2, 3 and 4 persons? Write a function that generates all the possibilities.
-a) 
+a) 有多少种方式将一组 9 个人分成三个分别为 2 个，3 个和 4 个不相交的子分组
 Example:
 
 	scala> group3(List("Aldo", "Beat", "Carla", "David", "Evi", "Flip", "Gary", "Hugo", "Ida"))
 	res0: List[List[List[String]]] = List(List(List(Aldo, Beat), List(Carla, David, Evi), List(Flip, Gary, Hugo, Ida)), ...
 
 b) Generalize the above predicate in a way that we can specify a list of group sizes and the predicate will return a list of groups.
+b) 从上一个例子推广到我们指定一个列表，包含各个分组的人数，来推算组合数
 
 Example:
 
@@ -227,8 +228,10 @@ Example:
 	res0: List[List[List[String]]] = List(List(List(Aldo, Beat), List(Carla, David), List(Evi, Flip, Gary, Hugo, Ida)), ...
 
 Note that we do not want permutations of the group members; i.e. ((Aldo, Beat), ...) is the same solution as ((Beat, Aldo), ...). However, we make a difference between ((Aldo, Beat), (Carla, David), ...) and ((Carla, David), (Aldo, Beat), ...).
+注意，我们不需要分组成员的排列；例如，((Aldo, Beat), ...)  和 ((Beat, Aldo), ...) 是一样. 但是, ((Aldo, Beat), (Carla, David), ...) 和 ((Carla, David), (Aldo, Beat), ...) 是有区别的（即组的顺序是排列问题）
 
 You may find more about this combinatorial problem in a good book on discrete mathematics under the term "multinomial coefficients".
+你也许会在一个关于离散数学书中的“多项式系数”章节中, 找到很多组合问题
 
 ##### [P28](http://aperiodic.net/phil/scala/s-99/p28.scala) (**) Sorting a list of lists according to length of sublists.
 a) We suppose that a list contains elements that are lists themselves. The objective is to sort the elements of the list according to their length. E.g. short lists first, longer lists later, or vice versa.

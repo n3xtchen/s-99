@@ -7,8 +7,6 @@
 
 package nextchen
 
-import P17.split
-
 object P26 {
 	// scala> combinations(3, List('a, 'b, 'c, 'd, 'e, 'f))
 	// res0: List[List[Symbol]] = List(List('a, 'b, 'c), List('a, 'b, 'd), List('a, 'b, 'e), ...
