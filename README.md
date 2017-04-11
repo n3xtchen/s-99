@@ -233,14 +233,16 @@ Note that we do not want permutations of the group members; i.e. ((Aldo, Beat), 
 You may find more about this combinatorial problem in a good book on discrete mathematics under the term "multinomial coefficients".
 你也许会在一个关于离散数学书中的“多项式系数”章节中, 找到很多组合问题
 
-##### [P28](http://aperiodic.net/phil/scala/s-99/p28.scala) (**) Sorting a list of lists according to length of sublists.
+##### [P28](http://aperiodic.net/phil/scala/s-99/p28.scala) (**) Sorting a list of lists according to length of sublists.根据子列表的长度进行排序。
 a) We suppose that a list contains elements that are lists themselves. The objective is to sort the elements of the list according to their length. E.g. short lists first, longer lists later, or vice versa.
+a) 我们假设一个列表的元素也是列表。目标就是根据子列表长度进行排序。例如，短列表在前面，长一点靠后，或者相反。
 Example:
 
 	scala> lsort(List(List('a, 'b, 'c), List('d, 'e), List('f, 'g, 'h), List('d, 'e), List('i, 'j, 'k, 'l), List('m, 'n), List('o)))
 	res0: List[List[Symbol]] = List(List('o), List('d, 'e), List('d, 'e), List('m, 'n), List('a, 'b, 'c), List('f, 'g, 'h), List('i, 'j, 'k, 'l))
 
 b) Again, we suppose that a list contains elements that are lists themselves. But this time the objective is to sort the elements according to their length frequency; i.e. in the default, sorting is done ascendingly, lists with rare lengths are placed, others with a more frequent length come later.
+b) 再来，我们假设一个列表的元素也是列表。但是这一次的目标是根据长度出现的频率进行排序。 
 
 Example:
 
@@ -248,6 +250,7 @@ Example:
 	res1: List[List[Symbol]] = List(List('i, 'j, 'k, 'l), List('o), List('a, 'b, 'c), List('f, 'g, 'h), List('d, 'e), List('d, 'e), List('m, 'n))
 
 Note that in the above example, the first two lists in the result have length 4 and 1 and both lengths appear just once. The third and fourth lists have length 3 and there are two list of this length. Finally, the last three lists have length 2. This is the most frequent length.
+注意上面的例子，结果的头两个列表长度分别是 4 和 1，但是只出现过1次。第三个和第四个列表的长度都是3，这个长度的列表有2个。最后，最后三个列表的长度都是2，这个是最频繁的长度了。
 
 Arithmetic
 
