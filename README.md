@@ -253,10 +253,12 @@ Note that in the above example, the first two lists in the result have length 4 
 注意上面的例子，结果的头两个列表长度分别是 4 和 1，但是只出现过1次。第三个和第四个列表的长度都是3，这个长度的列表有2个。最后，最后三个列表的长度都是2，这个是最频繁的长度了。
 
 Arithmetic
+算术
 
 For the next section, we're going to take a different tack with the solutions. We'll declare a new class, S99Int, and an implicit conversion from regular Ints. The arithmetic1 file contains the starting definitions for this section. Each individual solution will show the relevant additions to the S99Int class. The full class will be given at the end of the section.
+接下来的一个章节，我们将要采取不同的措施来寻找解决方案。我们将生命一个新的类，S99Int，和一个对常规整型的隐式转换。这个 arithmetic1 文件包含这个章节的起始定义。每一个解决方案将作为 S99Int 的相关部分。完整的类将在章节的结束的事后给出。
 
-##### [P31](http://aperiodic.net/phil/scala/s-99/p31.scala) (**) Determine whether a given integer number is prime.
+##### [P31](http://aperiodic.net/phil/scala/s-99/p31.scala) (**) Determine whether a given integer number is prime.检查一个数字是否是质数（Prime）。
 
 	scala> 7.isPrime
 	res0: Boolean = true
