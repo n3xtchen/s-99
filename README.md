@@ -263,7 +263,7 @@ For the next section, we're going to take a different tack with the solutions. W
 	scala> 7.isPrime
 	res0: Boolean = true
 
-##### [P32](http://aperiodic.net/phil/scala/s-99/p32.scala) (**) Determine the greatest common divisor of two positive integer numbers.
+##### [P32](http://aperiodic.net/phil/scala/s-99/p32.scala) (**) Determine the greatest common divisor of two positive integer numbers.提取两个整数间的最大公因数
 Use Euclid's algorithm.
 
 	scala> gcd(36, 63)
