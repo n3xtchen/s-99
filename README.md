@@ -269,8 +269,9 @@ Use Euclid's algorithm.
 	scala> gcd(36, 63)
 	res0: Int = 9
 
-##### [P33](http://aperiodic.net/phil/scala/s-99/p33.scala) (*) Determine whether two positive integer numbers are coprime.
+##### [P33](http://aperiodic.net/phil/scala/s-99/p33.scala) (*) Determine whether two positive integer numbers are coprime.判断两个正整数之间是否互质。
 Two numbers are coprime if their greatest common divisor equals 1.
+如果两个整数的最大公约数是 1，则称它们为互质[2]。
 
 	scala> 35.isCoprimeTo(64)
 	res0: Boolean = true
