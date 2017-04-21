@@ -290,13 +290,15 @@ Construct a flat list containing the prime factors in ascending order.
 	scala> 315.primeFactors
 	res0: List[Int] = List(3, 3, 5, 7)
 
-##### [P36](http://aperiodic.net/phil/scala/s-99/p36.scala) (**) Determine the prime factors of a given positive integer (2).
+##### [P36](http://aperiodic.net/phil/scala/s-99/p36.scala) (**) Determine the prime factors of a given positive integer (2).一个正整数的质因数分解（2）
 Construct a list containing the prime factors and their multiplicity.
+构建一个键值对是质因数和乘数的列表
 
 	scala> 315.primeFactorMultiplicity
 	res0: List[(Int, Int)] = List((3,2), (5,1), (7,1))
 
 Alternately, use a Map for the result.
+另外，你还可以使用 Map 类型
 
 
 	scala> 315.primeFactorMultiplicity

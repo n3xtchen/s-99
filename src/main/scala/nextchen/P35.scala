@@ -25,7 +25,7 @@ object P35 {
       }
     }.toList
 
-    // 递归发
+    // 递归法
     def primeFactorsR = {
       /**
        * n: 要分解的值
