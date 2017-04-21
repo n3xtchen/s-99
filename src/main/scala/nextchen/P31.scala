@@ -30,9 +30,7 @@ object P31 {
     def isPrimeA: Boolean = {
       Stream.from(2).takeWhile { _ <= Math.sqrt(x) }.forall { x % _ != 0 }
     }
-
   }
-
 
   def main(args: Array[String]) {
     println(7.isPrimeA)

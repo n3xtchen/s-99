@@ -276,14 +276,16 @@ Two numbers are coprime if their greatest common divisor equals 1.
 	scala> 35.isCoprimeTo(64)
 	res0: Boolean = true
 
-##### [P34](http://aperiodic.net/phil/scala/s-99/p34.scala) (**) Calculate Euler's totient function phi(m).
+##### [P34](http://aperiodic.net/phil/scala/s-99/p34.scala) (**) Calculate Euler's totient function phi(m).计算欧拉总计函数 phi(m)
 Euler's so-called totient function phi(m) is defined as the number of positive integers r (1 <= r <= m) that are coprime to m.
+所谓的欧拉总计函数 phi(m) 用来统计与 m 互质的正整数 r (1 <= r <= m) 的个数。
 
 	scala> 10.totient
 	res0: Int = 4
 
-##### [P35](http://aperiodic.net/phil/scala/s-99/p35.scala) (**) Determine the prime factors of a given positive integer.
+##### [P35](http://aperiodic.net/phil/scala/s-99/p35.scala) (**) Determine the prime factors of a given positive integer.一个正整数的质因数分解
 Construct a flat list containing the prime factors in ascending order.
+构建一个正序的质因数列表。
 
 	scala> 315.primeFactors
 	res0: List[Int] = List(3, 3, 5, 7)
