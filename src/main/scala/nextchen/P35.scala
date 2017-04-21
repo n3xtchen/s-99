@@ -13,7 +13,7 @@ object P35 {
 
   implicit class S99Int(val x: Int) extends P31.S99Int(x) {
 
-    // 质因数分解
+    // 质因数分解(迭代法)
     def primeFactors = {
       var y = x
       for {
@@ -24,6 +24,20 @@ object P35 {
           n
       }
     }.toList
+
+    // 递归发
+    def primeFactorsR = {
+      /**
+       * n: 要分解的值
+       * primeStream：质数流
+       **/
+      def proc(n: Int, primeStream: Stream[Int]): List[Int] = {
+        if (n.isPrime) List(n)  // 如果本身是质数，只有被本身因式分解
+        else if (n % primeStream.head == 0) primeStream.head :: proc(n / primeStream.head, primeStream) // 是因子，轮询
+        else proc(n, primeStream.tail)  // 不是的话，下一个质数
+      }
+      proc(x, S99Int.primes)
+    }
   }
 
   object S99Int {
@@ -32,6 +46,7 @@ object P35 {
 
   def main(args: Array[String]) {
     println(315.primeFactors)
+    println(315.primeFactorsR)
   }
 }
 
