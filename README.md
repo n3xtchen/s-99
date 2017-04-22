@@ -313,6 +313,7 @@ Note that ab stands for the bth power of a.
 
 ##### [P38](http://aperiodic.net/phil/scala/s-99/p38.scala) (*) Compare the two methods of calculating Euler's totient function.
 Use the solutions of problems P34 and P37 to compare the algorithms. Try to calculate phi(10090) as an example.
+通过计算 phi(10090) 对比下 P34 和 P37 算法性能。
 
 ##### [P39](http://aperiodic.net/phil/scala/s-99/p39.scala) (*) A list of prime numbers.
 Given a range of integers by its lower and upper limit, construct a list of all prime numbers in that range.
