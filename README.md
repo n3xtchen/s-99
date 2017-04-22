@@ -300,15 +300,16 @@ Construct a list containing the prime factors and their multiplicity.
 Alternately, use a Map for the result.
 另外，你还可以使用 Map 类型
 
-
 	scala> 315.primeFactorMultiplicity
 	res0: Map[Int,Int] = Map(3 -> 2, 5 -> 1, 7 -> 1)
 
-##### [P37](http://aperiodic.net/phil/scala/s-99/p37.scala) (**) Calculate Euler's totient function phi(m) (improved).
+##### [P37](http://aperiodic.net/phil/scala/s-99/p37.scala) (**) Calculate Euler's totient function phi(m) (improved)。欧拉计算欧拉总计函数 phi(m)(改善)
 See problem P34 for the definition of Euler's totient function. If the list of the prime factors of a number m is known in the form of problem P36 then the function phi(m>) can be efficiently calculated as follows: Let [[p1, m1], [p2, m2], [p3, m3], ...] be the list of prime factors (and their multiplicities) of a given number m. Then phi(m) can be calculated with the following formula:
-phi(m) = (p1-1)*p1(m1-1) * (p2-1)*p2(m2-1) * (p3-1)*p3(m3-1) * ...
+看 P34 的欧拉总计函数的定义。如果一个数字 m 的一个质因数列表用 P36 的形式，然后函数 phi(m>) 可以被有效的计算程如下形式：[[p1, m1], [p2, m2], [p3, m3], ...] 是m 的质因数（和他的乘数）的列表。phi(m) 可以被如下的公式计算：
+phi(m) = (p1-1)*p1^(m1-1) * (p2-1)*p2^(m2-1) * (p3-1)*p3^(m3-1) * ...
 
 Note that ab stands for the bth power of a.
+注意，a^b 代表 a 的 b 次方
 
 ##### [P38](http://aperiodic.net/phil/scala/s-99/p38.scala) (*) Compare the two methods of calculating Euler's totient function.
 Use the solutions of problems P34 and P37 to compare the algorithms. Try to calculate phi(10090) as an example.
