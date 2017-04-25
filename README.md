@@ -312,11 +312,12 @@ Note that ab stands for the bth power of a.
 注意，a^b 代表 a 的 b 次方
 
 ##### [P38](http://aperiodic.net/phil/scala/s-99/p38.scala) (*) Compare the two methods of calculating Euler's totient function.
-Use the solutions of problems P34 and P37 to compare the algorithms. Try to calculate phi(10090) as an example.
+Use the solutions of problems P34 and P37 to compare the algorithms. Try to calculate phi(10090) as an example. 
 通过计算 phi(10090) 对比下 P34 和 P37 算法性能。
 
-##### [P39](http://aperiodic.net/phil/scala/s-99/p39.scala) (*) A list of prime numbers.
-Given a range of integers by its lower and upper limit, construct a list of all prime numbers in that range.
+##### [P39](http://aperiodic.net/phil/scala/s-99/p39.scala) (*) A list of prime numbers.质数列表
+Given a range of integers by its lower and upper limit, construct a list of all prime numbers in that range. 
+给一个整数区间，构建一个列表包含这个访问内的所有质数。
 
 	scala> listPrimesinRange(7 to 31)
 	res0: List[Int] = List(7, 11, 13, 17, 19, 23, 29, 31)
