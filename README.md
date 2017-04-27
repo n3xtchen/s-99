@@ -322,8 +322,9 @@ Given a range of integers by its lower and upper limit, construct a list of all 
 	scala> listPrimesinRange(7 to 31)
 	res0: List[Int] = List(7, 11, 13, 17, 19, 23, 29, 31)
 
-##### [P40](http://aperiodic.net/phil/scala/s-99/p40.scala) (**) Goldbach's conjecture.
+##### [P40](http://aperiodic.net/phil/scala/s-99/p40.scala) (**) Goldbach's conjecture.哥德巴赫猜想
 Goldbach's conjecture says that every positive even number greater than 2 is the sum of two prime numbers. E.g. 28 = 5 + 23. It is one of the most famous facts in number theory that has not been proved to be correct in the general case. It has been numerically confirmed up to very large numbers (much larger than Scala's Int can represent). Write a function to find the two prime numbers that sum up to a given even integer.
+歌德巴赫猜想：每一个大于2的偶数都可以表示成22 个质数之和。例如，28 = 5 + 23。它是数论中存在最久的未解问题之一。它已经在大量的数字中得到论证了（至少比 Scala 整型的范围大很多）。写一个函数给予一个偶数找出两个和等于这个数字的质数。
 
 	scala> 28.goldbach
 	res0: (Int, Int) = (5,23)
