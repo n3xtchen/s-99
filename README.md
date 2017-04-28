@@ -329,8 +329,9 @@ Goldbach's conjecture says that every positive even number greater than 2 is the
 	scala> 28.goldbach
 	res0: (Int, Int) = (5,23)
 
-##### [P41](http://aperiodic.net/phil/scala/s-99/p41.scala) (**) A list of Goldbach compositions.
+##### [P41](http://aperiodic.net/phil/scala/s-99/p41.scala) (**) A list of Goldbach compositions.哥德巴赫组合列表
 Given a range of integers by its lower and upper limit, print a list of all even numbers and their Goldbach composition.
+给一个整型范围，打印所有的偶数和他的哥德巴赫组合。
 
 	scala> printGoldbachList(9 to 20)
 	10 = 3 + 7

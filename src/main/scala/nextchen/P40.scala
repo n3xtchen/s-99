@@ -14,16 +14,11 @@ object P40 {
   implicit class S99Int(val n: Int) extends P35.S99Int(n) {
     // 歌德巴赫猜想
     def goldbach() = {
-
       def proc(ps: Stream[Int]): (Int, Int) = ps match {
         case x #:: _ if (n-x).isPrime => (x, n-x)
         case _ #:: tail => proc(tail)
       } 
-
       proc(P35.S99Int.primes)
-      // P35.S99Int.primes
-      //   .map { x => (x, (n-x)) }
-      //   .takeWhile { !_._2.isPrime }
     }
   }
 
