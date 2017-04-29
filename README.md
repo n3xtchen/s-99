@@ -357,8 +357,9 @@ Logic and Codes
 
 As in the previous section, we will start with a skeleton file, logic1.scala, and add code to it for each problem. The difference here is that the file starts out almost empty.
 
-##### [P46](http://aperiodic.net/phil/scala/s-99/p46.scala) (**) Truth tables for logical expressions.
+##### [P46](http://aperiodic.net/phil/scala/s-99/p46.scala) (**) Truth tables for logical expressions.逻辑表达式真值表。
 Define functions and, or, nand, nor, xor, impl, and equ (for logical equivalence) which return true or false according to the result of their respective operations; e.g. and(A, B) is true if and only if both A and B are true.
+为 and, or, nand, nor, xor, impl 和 equ 这些逻辑等式定义函数，它根据他们对应操作的结果返回真假布尔值；如当 A 和 B 同时为真时，and(A, B) 返回真 
 
 	scala> and(true, true)
 	res0: Boolean = true
