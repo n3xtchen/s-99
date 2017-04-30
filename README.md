@@ -342,8 +342,9 @@ Given a range of integers by its lower and upper limit, print a list of all even
 	20 = 3 + 17
 	
 In most cases, if an even number is written as the sum of two prime numbers, one of them is very small. Very rarely, the primes are both bigger than, say, 50. Try to find out how many such cases there are in the range 2..3000.
+在大部分场景下，如果一个偶数被写成质数和形式，他们中其中一个会特别小。两个质数都大于 50 的非常罕见。试一试找出 2 到 3000 之间这样的例子。
 
-Example (minimum value of 50 for the primes):
+Example (minimum value of 50 for the primes):例子（最小值是 50 的质数）：
 
 	scala> printGoldbachListLimited(1 to 2000, 50)
 	992 = 73 + 919
@@ -352,6 +353,7 @@ Example (minimum value of 50 for the primes):
 	1928 = 61 + 1867
 
 The file containing the full class for this section is arithmetic.scala.
+这个章节所有的类都整合到 arithmetic.scala 文件中。
 
 Logic and Codes
 
