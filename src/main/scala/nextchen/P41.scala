@@ -25,8 +25,16 @@ object P41 {
     }
   }
 
+  def  printGoldbachListLimited(r: Range, min: Int) = for {
+    i <- r
+    if i % 2 == 0
+    (a, b) = i.goldbach
+    if a > min
+  } yield s"$i = $a + $b"
+
   def main(args: Array[String]) {
     printGoldbachList(9 to 20).foreach(println)
+    printGoldbachListLimited(9 to 2000, 50).foreach(println)
   }
 }
 
