@@ -7,7 +7,7 @@
 
 package nextchen
 
-object arithmetic {
+object Arithmetic {
 
   // 性能测试
   def time[A](label: String)(block: => A): A = {
@@ -23,7 +23,7 @@ object arithmetic {
      *
      * 只能被 1 和 本身整除
      **/
-    def isPrime: Boolean = {
+    def isPrimeM: Boolean = {
       (x > 1) && (2 to x-1).filter(x % _ == 0).length == 0
     }
 
@@ -33,7 +33,7 @@ object arithmetic {
      * 若存在一个相除为整数的结果，则 n 不是素数；反之则是个素数。
      *
      **/
-    def isPrimeA: Boolean = {
+    def isPrime: Boolean = {
       Stream.from(2).takeWhile { _ <= Math.sqrt(x) }.forall { x % _ != 0 }
     }
 
