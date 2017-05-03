@@ -102,14 +102,14 @@ object Arithmetic {
     // 小于 X 并与 X 互质的正整数的个数
     // phi(m) = (p1-1)*p1^(m1-1) * (p2-1)*p2^(m2-1) * (p3-1)*p3^(m3-1) * ...
     // https://zh.wikipedia.org/wiki/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0
-    def totient: Int = {
+    def totientM: Int = {
       x.primeFactorMultiplicityR map { case (a, b) => (a-1)*Math.pow(a, b-1) toInt } reduce { _*_ }
     }
 
     // 歌德巴赫猜想
     def goldbach() = {
       def proc(ps: Stream[Int]): (Int, Int) = ps match {
-        case x #:: _ if (n-x).isPrime => (x, n-x)
+        case n #:: _ if (x-n).isPrime => (n, x-n)
         case _ #:: tail => proc(tail)
       } 
       proc(P35.S99Int.primes)

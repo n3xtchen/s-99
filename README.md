@@ -370,8 +370,11 @@ Define functions and, or, nand, nor, xor, impl, and equ (for logical equivalence
 	res1: Boolean = false
 
 A logical expression in two variables can then be written as an function of two variables, e.g: (a: Boolean, b: Boolean) => and(or(a, b), nand(a, b))
+两个变量的逻辑表达式可以写成两个参数的函数，例如：(a: Boolean, b: Boolean) => and(or(a, b), nand(a, b))
+
 
 Now, write a function called table2 which prints the truth table of a given logical expression in two variables.
+仙子啊，写一个名为 table2 函数，打印两个变量的逻辑关系的真值表。
 
 
 	scala> table2((a: Boolean, b: Boolean) => and(a, or(a, b)))
