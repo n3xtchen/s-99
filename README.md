@@ -384,8 +384,9 @@ Now, write a function called table2 which prints the truth table of a given logi
 	false true  false
 	false false false
 
-##### [P47](http://aperiodic.net/phil/scala/s-99/p47.scala) (*) Truth tables for logical expressions (2).
+##### [P47](http://aperiodic.net/phil/scala/s-99/p47.scala) (*) Truth tables for logical expressions (2).逻辑表达式的真值表(2)。
 Continue problem P46 by redefining and, or, etc as operators. (i.e. make them methods of a new class with an implicit conversion from Boolean.) not will have to be left as a object method.
+继续问题 P46，重新定义 and, or 等等操作符。（例如，使用 Boolean 的隐式转换创建新类的方法）。把它放在对象方法中
 
 	scala> table2((a: Boolean, b: Boolean) => a and (a or not(b)))
 	A     B     result
@@ -1029,5 +1030,3 @@ The particular crossword puzzle is specified in a text file which first lists th
 Words are strings of at least two characters. A horizontal or vertical sequence of character places in the crossword puzzle framework is called a site. Our problem is to find a compatible way of placing words onto sites.
 
 Hints: (1) The problem is not easy. You will need some time to thoroughly understand it. So, don't give up too early! And remember that the objective is a clean solution, not just a quick-and-dirty hack!
-
-(2) For efficiency reasons it is important, at least for larger puzzles, to sort the words and the sites in a particular order. For this part of the problem, the solution of P28 may be very helpful.
