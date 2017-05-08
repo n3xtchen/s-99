@@ -395,8 +395,8 @@ Continue problem P46 by redefining and, or, etc as operators. (i.e. make them me
 	false true  false
 	false false false
 
-##### [P48](http://aperiodic.net/phil/scala/s-99/p48.scala) (**) Truth tables for logical expressions (3).
-Omitted for now.
+##### [P48](http://aperiodic.net/phil/scala/s-99/p48.scala) (**) Truth tables for logical expressions (3).逻辑表达式真值表(3)
+Omitted for now.现在忽略
 
 ##### [P49](http://aperiodic.net/phil/scala/s-99/p49.scala) (**) Gray code.
 An n-bit Gray code is a sequence of n-bit strings constructed according to certain rules. For example,
