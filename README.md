@@ -398,19 +398,22 @@ Continue problem P46 by redefining and, or, etc as operators. (i.e. make them me
 ##### [P48](http://aperiodic.net/phil/scala/s-99/p48.scala) (**) Truth tables for logical expressions (3).逻辑表达式真值表(3)
 Omitted for now.现在忽略
 
-##### [P49](http://aperiodic.net/phil/scala/s-99/p49.scala) (**) Gray code.
+##### [P49](http://aperiodic.net/phil/scala/s-99/p49.scala) (**) Gray code.格雷码
 An n-bit Gray code is a sequence of n-bit strings constructed according to certain rules. For example,
+一个 n 位格雷码是一个更具特定规则构建的 n 位字符串序列
 
 	n = 1: C(1) = ("0", "1").
 	n = 2: C(2) = ("00", "01", "11", "10").
 	n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").
 
 Find out the construction rules and write a function to generate Gray codes.
-
+找出构建规则，并写出生成格雷码的函数。
 
 	scala> gray(3)
-res0 List[String] = List(000, 001, 011, 010, 110, 111, 101, 100)
+    res0 List[String] = List(000, 001, 011, 010, 110, 111, 101, 100)
+
 See if you can use memoization to make the function more efficient.
+看看能否采用缓存的方式让函数更加高效。
 
 ##### [P50](http://aperiodic.net/phil/scala/s-99/p50.scala) (***) Huffman code.
 First of all, consult a good book on discrete mathematics or algorithms for a detailed description of Huffman codes!
