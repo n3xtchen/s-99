@@ -415,13 +415,16 @@ Find out the construction rules and write a function to generate Gray codes.
 See if you can use memoization to make the function more efficient.
 看看能否采用缓存的方式让函数更加高效。
 
-##### [P50](http://aperiodic.net/phil/scala/s-99/p50.scala) (***) Huffman code.
+##### [P50](http://aperiodic.net/phil/scala/s-99/p50.scala) (***) Huffman code.霍夫曼编码。
 First of all, consult a good book on discrete mathematics or algorithms for a detailed description of Huffman codes!
+首先，找一本关于离散数学或算法的好书，了解下霍夫曼编码的具体描述。
 We suppose a set of symbols with their frequencies, given as a list of (S, F) Tuples. E.g.
+我们假设有下面这些带着频度的符号集，以 (S, F) 的类标形式：
 
 	 (("a", 45), ("b", 13), ("c", 12), ("d", 16), ("e", 9), ("f", 5)). 
 	 
 Our objective is to construct a list of (S, C) Tuples, where C is the Huffman code word for the symbol S.
+我们的目标是构建一个 (S, C) 元组列表，C 是对符号 S 的霍夫曼编码。
 
 	scala> huffman(List(("a", 45), ("b", 13), ("c", 12), ("d", 16), ("e", 9), ("f", 5)))
 	res0: List[String, String] = List((a,0), (b,101), (c,100), (d,111), (e,1101), (f,1100))
