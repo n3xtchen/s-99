@@ -16,24 +16,21 @@ object P50 {
     import nextchen.P07.flatten
 
     def proc(
-      tmp: List[(Any, Int)],
-      result: Map[String, String] = Map.empty
+      tmp: List[(List[String], Int)],
+      result: Map[String, String] = Map[String, String]()
     ): Map[String, String] = if (tmp.length == 1) {
       result 
     } else {
-      def updateCode(r: Any, prefix: String) = r match {
-        case i:String => result(i) = prefix + result.getOrElse(i, "")
-        case x: List[Any] => flatten(x)
-          .map { case y: String => result(y) = prefix + result.getOrElse(y, "") }
-      }
-      val ( a :: b :: tail) = tmp.sortBy(_._2)
-      updateCode(a._1, "0")
-      updateCode(b._1, "1")
-      proc((List(a._1, b._1), a._2+b._2) :: tail, result)
+      val (a, va)  :: (b, vb) :: tail = tmp.sortBy(_._2)
+      for ( (k,v)  <- b.map((_,"1")) ++ a.map((_, "0")))
+        result(k) = v + result.getOrElse(k, "")
+      proc(
+        (a++b, va+vb) :: tail,
+        result
+      )
     }
-    proc(l).toList.sorted
+    proc(l.map { case (k, v) => (List(k), v) }).toSeq.sortBy(_._1)
   }
-
 
   def main(args: Array[String]) {
     println(huffman(List(("a", 45), ("b", 13), ("c", 12), ("d", 16), ("e", 9), ("f", 5))))
