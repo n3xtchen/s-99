@@ -430,10 +430,13 @@ Our objective is to construct a list of (S, C) Tuples, where C is the Huffman co
 	res0: List[String, String] = List((a,0), (b,101), (c,100), (d,111), (e,1101), (f,1100))
 
 Binary Trees
+二叉树
 
 A binary tree is either empty or it is composed of a root element and two successors, which are binary trees themselves.
+二叉树要么为空，要么由一个根结点和两个子节点构成；子节点本身也是个二叉树。
 
 We shall use the following classes to represent binary trees. (Also available in tree1.scala.) An End is equivalent to an empty tree. A Branch has a value, and two descendant trees. The toString functions are relatively arbitrary, but they yield a more compact output than Scala's default. Putting a plus in front of the T makes the class covariant; it will be able to hold subtypes of whatever type it's created for. (This is important so that End can be a singleton object; as a singleton, it must have a specific type, so we give it type Nothing, which is a subtype of every other type.)
+我们应该使用下面的类来呈现二叉树。（也在 tree1.scala 中可用。）一个结束节点等同与一个空树。每个分支都有一个值和两个子树。toString 函数相对独立，但是 scala 默认输出的更佳紧凑。在类前面放一个加号，代表协变（covariant）；它将可以是任意一个包含这个类的类。（这个很重要，因此最后会是一个单例对象；作为单例，它必须是一个指定类型，因此我们给它一个 Nothing 类型，它是所有其他类的子类型。）
 
 	sealed abstract class Tree[+T]
 	case class Node[+T](value: T, left: Tree[T], right: Tree[T]) extends Tree[T] {
