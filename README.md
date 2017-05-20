@@ -450,14 +450,18 @@ We shall use the following classes to represent binary trees. (Also available in
 	}
 
 The example tree on the right is given by
+右侧的例子就是树：
+
 
 	Node('a',
 	     Node('b', Node('d'), Node('e')),
 	     Node('c', End, Node('f', Node('g'), End)))
      
 A tree with only a root node would be Node('a') and an empty tree would be End.
+一个树只有一个根节点（这里是 Node('a')）和一个空树是 End。
 
 Throughout this section, we will be adding methods to the classes above, mostly to Tree.
+通过本个章节，我们将为上面的类添加方法，主要是针对树。
 
 ##### [P54](http://aperiodic.net/phil/scala/s-99/p54.scala) Omitted; our tree representation will only allow well-formed trees.
 Score one for static typing.
