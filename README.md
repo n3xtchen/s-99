@@ -463,8 +463,10 @@ A tree with only a root node would be Node('a') and an empty tree would be End.
 Throughout this section, we will be adding methods to the classes above, mostly to Tree.
 通过本个章节，我们将为上面的类添加方法，主要是针对树。
 
-##### [P54](http://aperiodic.net/phil/scala/s-99/p54.scala) Omitted; our tree representation will only allow well-formed trees.忽略
+##### [P54](http://aperiodic.net/phil/scala/s-99/p54.scala) Omitted; our tree representation will only allow well-formed trees.忽略；我们的展示仅针对格式良好的二叉树。
+
 Score one for static typing.
+
 
 ##### [P55](http://aperiodic.net/phil/scala/s-99/p55.scala) (**) Construct completely balanced binary trees.
 In a completely balanced binary tree, the following property holds for every node: The number of nodes in its left subtree and the number of nodes in its right subtree are almost equal, which means their difference is not greater than one.
