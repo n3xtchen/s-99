@@ -466,6 +466,7 @@ Throughout this section, we will be adding methods to the classes above, mostly 
 ##### [P54](http://aperiodic.net/phil/scala/s-99/p54.scala) Omitted; our tree representation will only allow well-formed trees.忽略；我们的展示仅针对格式良好的二叉树。
 
 Score one for static typing.
+使用静态类型
 
 
 ##### [P55](http://aperiodic.net/phil/scala/s-99/p55.scala) (**) Construct completely balanced binary trees.
