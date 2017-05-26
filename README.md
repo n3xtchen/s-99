@@ -469,9 +469,11 @@ Score one for static typing.
 使用静态类型
 
 
-##### [P55](http://aperiodic.net/phil/scala/s-99/p55.scala) (**) Construct completely balanced binary trees.
+##### [P55](http://aperiodic.net/phil/scala/s-99/p55.scala) (**) Construct completely balanced binary trees.构建一个完全平衡二叉树
 In a completely balanced binary tree, the following property holds for every node: The number of nodes in its left subtree and the number of nodes in its right subtree are almost equal, which means their difference is not greater than one.
+在一个完全平衡的二叉树中，每个节点都有一个特点：左侧子树的节点数量和右侧的几乎相等；更准确的说，他们之间的数量的差异不会大于 1.
 Define an object named Tree. Write a function Tree.cBalanced to construct completely balanced binary trees for a given number of nodes. The function should generate all solutions. The function should take as parameters the number of nodes and a single value to put in all of them.
+定义一个名为 tree 的对象。实现一个名为 Tree.cBalanced 的函数来构建给予指定数量的节点的完全平衡二叉树。函数应该生成全部的方案。函数应该传入节点数量和一个单一值（用来命名所有节点）
 
 	scala> Tree.cBalanced(4, "x")
 	res0: List(Node[String]) = List(T(x T(x . .) T(x . T(x . .))), T(x T(x . .) T(x T(x . .) .)), ...
