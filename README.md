@@ -482,12 +482,12 @@ Define an object named Tree. Write a function Tree.cBalanced to construct comple
 Let us call a binary tree symmetric if you can draw a vertical line through the root node and then the right subtree is the mirror image of the left subtree. Add an isSymmetric method to the Tree class to check whether a given binary tree is symmetric. Hint: Write an isMirrorOf method first to check whether one tree is the mirror image of another. We are only interested in the structure, not in the contents of the nodes.
 如果你能画一条竖线穿过根节点，右侧的子树是左侧的镜像，我们称这个二叉树对称。给 Tree 类添加一个 isSymmetric 方法检查给予的二叉树是否对称。提示：首先写一个 isMirrorOf 方法检查一个树的镜像。我们只感兴趣结构，不关心节点内容。
 
-
 	scala> Node('a', Node('b'), Node('c')).isSymmetric
 	res0: Boolean = true
 
-##### [P57](http://aperiodic.net/phil/scala/s-99/p57.scala) (**) Binary search trees (dictionaries).
+##### [P57](http://aperiodic.net/phil/scala/s-99/p57.scala) (**) Binary search trees (dictionaries).二叉搜索树（字典）。
 Write a function to add an element to a binary search tree.
+写一个函数，用来给一个二叉搜索树添加一个元素。
 
 	scala> End.addValue(2)
 	res0: Node[Int] = T(2 . .)
@@ -499,6 +499,7 @@ Write a function to add an element to a binary search tree.
 	res2: Node[Int] = T(2 T(0 . .) T(3 . .))
 
 Hint: The abstract definition of addValue in Tree should be def addValue[U >: T <% Ordered[U]](x: U): Tree[U]. The >: T is because addValue's parameters need to be contravariant in T. (Conceptually, we're adding nodes above existing nodes. In order for the subnodes to be of type T or any subtype, the upper nodes must be of type T or any supertype.) The <% Ordered[U] allows us to use the < operator on the values in the tree.
+提示：定义一个名叫 addValue 的抽象定义，`def addValue[U >: T <% Ordered[U]](x: U): Tree[U]`。`>: T` 告诉方法后续的的参数可以是 T 的逆变。（概念上说，我们为一个存在的节点添加子节点）。 
 
 Use that function to construct a binary tree from a list of integers.
 
