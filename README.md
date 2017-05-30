@@ -499,7 +499,7 @@ Write a function to add an element to a binary search tree.
 	res2: Node[Int] = T(2 T(0 . .) T(3 . .))
 
 Hint: The abstract definition of addValue in Tree should be def addValue[U >: T <% Ordered[U]](x: U): Tree[U]. The >: T is because addValue's parameters need to be contravariant in T. (Conceptually, we're adding nodes above existing nodes. In order for the subnodes to be of type T or any subtype, the upper nodes must be of type T or any supertype.) The <% Ordered[U] allows us to use the < operator on the values in the tree.
-提示：定义一个名叫 addValue 的抽象定义，`def addValue[U >: T <% Ordered[U]](x: U): Tree[U]`。`>: T` 告诉方法后续的的参数可以是 T 的逆变。（概念上说，我们为一个存在的节点添加子节点）。 
+提示：定义一个名叫 addValue 的抽象定义，`def addValue[U >: T <% Ordered[U]](x: U): Tree[U]`。`>: T` 告诉方法后续的的参数可以是 T 的逆变。（概念上说，我们为一个存在的节点添加子节点。子节点的类型必须是 T 或其任何子类型，父节点必须是类型 T 或其任何超类）。`<% Ordered[U]` 允许我们使用对树的值进行 `<` 操作符。
 
 Use that function to construct a binary tree from a list of integers.
 
