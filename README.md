@@ -436,7 +436,7 @@ A binary tree is either empty or it is composed of a root element and two succes
 二叉树要么为空，要么由一个根结点和两个子节点构成；子节点本身也是个二叉树。
 
 We shall use the following classes to represent binary trees. (Also available in tree1.scala.) An End is equivalent to an empty tree. A Branch has a value, and two descendant trees. The toString functions are relatively arbitrary, but they yield a more compact output than Scala's default. Putting a plus in front of the T makes the class covariant; it will be able to hold subtypes of whatever type it's created for. (This is important so that End can be a singleton object; as a singleton, it must have a specific type, so we give it type Nothing, which is a subtype of every other type.)
-我们应该使用下面的类来呈现二叉树。（也在 tree1.scala 中可用。）一个结束节点等同与一个空树。每个分支都有一个值和两个子树。toString 函数相对独立，但是 scala 默认输出的更佳紧凑。在类前面放一个加号，代表协变（covariant）；它将可以是任意一个包含这个类的类。（这个很重要，因此最后会是一个单例对象；作为单例，它必须是一个指定类型，因此我们给它一个 Nothing 类型，它是所有其他类的子类型。）
+我们应该使用下面的类（Class）来呈现二叉树。（也在 *tree1.scala* 中可用。）一个 **End** 节点等价于一个空树。每个分支都有一个值和两个子树。`toString` 函数相对随意，但是比 **scala** 默认输出的更佳紧凑。`T` 前面的加号代表协变（covariant）；它必须是这个类型的的子类。（这个很重要，因为 **End** 会是一个单例对象；作为单例，它必须是一个指定类型，因此我们给它一个 `Nothing` 类型，它是所有其他类的子类型。）
 
 	sealed abstract class Tree[+T]
 	case class Node[+T](value: T, left: Tree[T], right: Tree[T]) extends Tree[T] {
@@ -450,18 +450,17 @@ We shall use the following classes to represent binary trees. (Also available in
 	}
 
 The example tree on the right is given by
-右侧的例子就是树：
-
+右边的例子就是一颗树：
 
 	Node('a',
 	     Node('b', Node('d'), Node('e')),
 	     Node('c', End, Node('f', Node('g'), End)))
-     
+
 A tree with only a root node would be Node('a') and an empty tree would be End.
-一个树只有一个根节点（这里是 Node('a')）和一个空树是 End。
+一个树只有一个根节点（这里是 `Node('a')`）和一个空树是 **End**。
 
 Throughout this section, we will be adding methods to the classes above, mostly to Tree.
-通过本个章节，我们将为上面的类添加方法，主要是针对树。
+通过本个章节，我们将为上面的类添加方法，大部分是基于树。
 
 ##### [P54](http://aperiodic.net/phil/scala/s-99/p54.scala) Omitted; our tree representation will only allow well-formed trees.忽略；我们的展示仅针对格式良好的二叉树。
 
