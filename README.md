@@ -500,7 +500,7 @@ Hint: The abstract definition of addValue in Tree should be def addValue[U >: T 
 提示：定义一个名叫 addValue 的抽象定义，`def addValue[U >: T <% Ordered[U]](x: U): Tree[U]`。`>: T` 告诉方法后续的的参数可以是 T 的逆变。（概念上说，我们为一个存在的节点添加子节点。子节点的类型必须是 T 或其任何子类型，父节点必须是类型 T 或其任何超类）。`<% Ordered[U]` 允许我们使用对树的值进行 `<` 操作符。
 
 Use that function to construct a binary tree from a list of integers.
-
+使用这个函数构建二叉树
 	scala> Tree.fromList(List(3, 2, 5, 7, 1))
 	res3: Node[Int] = T(3 T(2 T(1 . .) .) T(5 . T(7 . .)))
 
