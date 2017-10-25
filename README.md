@@ -500,11 +500,13 @@ Hint: The abstract definition of addValue in Tree should be def addValue[U >: T 
 提示：定义一个名叫 addValue 的抽象定义，`def addValue[U >: T <% Ordered[U]](x: U): Tree[U]`。`>: T` 告诉方法后续的的参数可以是 T 的逆变。（概念上说，我们为一个存在的节点添加子节点。子节点的类型必须是 T 或其任何子类型，父节点必须是类型 T 或其任何超类）。`<% Ordered[U]` 允许我们使用对树的值进行 `<` 操作符。
 
 Use that function to construct a binary tree from a list of integers.
-使用这个函数构建二叉树
+使用这个函数把一个整型列表构建成二叉树。
+
 	scala> Tree.fromList(List(3, 2, 5, 7, 1))
 	res3: Node[Int] = T(3 T(2 T(1 . .) .) T(5 . T(7 . .)))
 
 Finally, use that function to test your solution to P56.
+最后，使用那个函数测试你的 P56 的方案。
 
 	scala> Tree.fromList(List(5, 3, 18, 1, 4, 12, 21)).isSymmetric
 	res4: Boolean = true
@@ -517,7 +519,7 @@ Apply the generate-and-test paradigm to construct all symmetric, completely bala
 
 	scala> Tree.symmetricBalancedTrees(5, "x")
 	res0: List[Node[String]] = List(T(x T(x . T(x . .)) T(x T(x . .) .)), T(x T(x T(x . .) .) T(x . T(x . .))))
-
+ 
 ##### [P59](http://aperiodic.net/phil/scala/s-99/p59.scala) (**) Construct height-balanced binary trees.
 In a height-balanced binary tree, the following property holds for every node: The height of its left subtree and the height of its right subtree are almost equal, which means their difference is not greater than one.
 Write a method Tree.hbalTrees to construct height-balanced binary trees for a given height with a supplied value for the nodes. The function should generate all solutions.
