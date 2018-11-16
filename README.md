@@ -514,8 +514,9 @@ Finally, use that function to test your solution to P56.
 	scala> Tree.fromList(List(3, 2, 5, 7, 4)).isSymmetric
 	res5: Boolean = false
 
-##### [P58](http://aperiodic.net/phil/scala/s-99/p58.scala) (**) Generate-and-test paradigm.
+##### [P58](http://aperiodic.net/phil/scala/s-99/p58.scala) (**) Generate-and-test paradigm.生成和测试规范。
 Apply the generate-and-test paradigm to construct all symmetric, completely balanced binary trees with a given number of nodes.
+把生成和测试范例应用到构建给定节点数量的所有对称，完全平衡的二叉树。
 
 	scala> Tree.symmetricBalancedTrees(5, "x")
 	res0: List[Node[String]] = List(T(x T(x . T(x . .)) T(x T(x . .) .)), T(x T(x T(x . .) .) T(x . T(x . .))))
