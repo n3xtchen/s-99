@@ -16,13 +16,28 @@ object Tree1 {
    *
    **/
   def cBalance[T](n: Int, name: T): List[Node[T]] = {
-    List(Node(name))
+    List(
+      Node(name)
+      )
   }
+  def bBalanced[T](nodes: Int, value: T): List[Tree[T]] = nodes match {
+    case n if n < 1 => List(End)
+    case n if n % 2 == 1 => {
+      val subtrees = bBalanced(n / 2, value)
+      subtrees.flatMap(l => subtrees.map(r => Node(value, l, r)))
+    }
+    case n if n % 2 == 0 => {
+      val lesserSubtrees = bBalanced((n - 1) / 2, value)
+      val greaterSubtrees = bBalanced((n - 1) / 2 + 1, value)
+      lesserSubtrees.flatMap(l => greaterSubtrees.flatMap(g => List(Node(value, l, g), Node(value, g, l))))
+    }
+  }
+
 }
 
 object P55 {
   def main(args: Array[String]) {
-    println(Tree1.cBalance(4, 'x'))
+    println(Tree1.bBalanced(4, 'x'))
   }
 }
 
