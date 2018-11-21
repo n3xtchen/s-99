@@ -15,10 +15,16 @@ object Tree1 {
    *  name: 节点命名
    *
    **/
-  def cBalance[T](n: Int, name: T): List[Node[T]] = {
-    List(
-      Node(name)
-      )
+  def cBalance[T](n: Int, name: T): List[Node[T]] = n match {
+    case 0 => End
+    // 不对称
+    case n if n % 2 == 1 => {
+    }
+    // 对称
+    case n if n % 2 == 0 => {
+      val s1 = cBalance((n-1)/2, name)
+      val s2 = cBalance((n-1)/2+1, name)
+    }
   }
   def bBalanced[T](nodes: Int, value: T): List[Tree[T]] = nodes match {
     case n if n < 1 => List(End)
@@ -37,7 +43,7 @@ object Tree1 {
 
 object P55 {
   def main(args: Array[String]) {
-    println(Tree1.bBalanced(4, 'x'))
+    println(Tree1.cBalanced(0, 'x'))
   }
 }
 
