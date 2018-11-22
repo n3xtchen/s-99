@@ -19,6 +19,9 @@ object Tree1 {
     case 0 => End
     // 不对称
     case n if n % 2 == 1 => {
+      val lesserSubtrees = bBalanced((n - 1) / 2, value)
+      val greaterSubtrees = bBalanced((n - 1) / 2 + 1, value)
+      lesserSubtrees.flatMap(l => greaterSubtrees.flatMap(g => List(Node(value, l, g), Node(value, g, l))))
     }
     // 对称
     case n if n % 2 == 0 => {
